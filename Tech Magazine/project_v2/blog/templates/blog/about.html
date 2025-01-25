@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>درباره ما</title>
+    <link rel="stylesheet" href="{% static 'styles.css' %}">
+</head>
+<body>
+  <!-- ساختار کلی صفحه -->
+  <div class="page-wrapper">
+    <!-- Header Section -->
+    <header>
+      <div class="header-content">
+        <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+        <!-- بخش راست: عنوان یا لوگوی سایت -->
+        <div class="right-section">
+          <h1>Tech Magazine</h1>
+        </div>
+    
+        <!-- لینک‌های ناوبری -->
+        <nav class="center-nav">
+          <ul>
+            <li><a href="{% url 'home' %}">خانه</a></li>
+            
+            <li><a href="{% url 'contact' %}">تماس با ما</a></li>
+          </ul>
+        </nav>
+    
+        <!-- بخش جستجو -->
+        <div class="search">
+          <input type="text" placeholder="جستجو...">
+          <button>جستجو</button>
+        </div>
+      </div>
+    </header>
+
+    <!-- Main Content Section -->
+    <main class="about-page">
+        <div class="container">
+            <h1>درباره ما</h1>
+            <p>
+                به Tech Magazine خوش آمدید. ما در اینجا آخرین اخبار و مقالات تکنولوژی را با شما به اشتراک می‌گذاریم.
+                هدف ما این است که اطلاعات به‌روز و دقیق درباره تکنولوژی‌های جدید و دنیای فناوری به شما ارائه دهیم.
+            </p>
+            <p>
+                تیم ما از افراد متخصص در زمینه فناوری اطلاعات تشکیل شده و با تلاش و علاقه، بهترین محتوا را برای شما آماده می‌کند.
+                با ما همراه باشید تا همیشه یک قدم جلوتر از دیگران باشید.
+            </p>
+        </div>
+    </main>
+
+    <!-- Footer Section -->
+    <footer>
+      <div class="container">
+        <nav class="footer-nav">
+          <ul>
+            <li><a href="{% url 'about' %}">درباره ما</a></li>
+            <li><a href="{% url 'contact' %}">تماس با ما</a></li>
+          </ul>
+        </nav>
+        <div class="social-links">
+          <p>تمامی حقوق محفوظ است - Tech Magazine © 2025</p>
+        </div>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>ورود و ثبت‌نام</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Header Section -->
+  <header>
+    <div class="container">
+      <div class="logo">
+        
+      </div>
+    </div>
+  </header>
+
+  <!-- Login/Register Section -->
+  <section class="login-register">
+    <div class="container">
+      <h2>ورود یا ثبت‌نام</h2>
+      <div class="tabs">
+        <button class="tab-button active" onclick="showForm('login')">ورود</button>
+        <button class="tab-button" onclick="showForm('register')">ثبت‌نام</button>
+      </div>
+
+      <!-- Login Form -->
+      <div id="login-form" class="form-container active">
+        <form action="#" method="post">
+          <label for="login-email">ایمیل:</label>
+          <input type="email" id="login-email" name="email" placeholder="ایمیل خود را وارد کنید" required>
+
+          <label for="login-password">رمز عبور:</label>
+          <input type="password" id="login-password" name="password" placeholder="رمز عبور خود را وارد کنید" required>
+
+          <button type="submit">ورود</button>
+        </form>
+        
+      </div>
+
+      <!-- Register Form -->
+      <div id="register-form" class="form-container">
+        <form action="#" method="post">
+          <label for="register-name">نام کامل:</label>
+          <input type="text" id="register-name" name="name" placeholder="نام خود را وارد کنید" required>
+
+          <label for="register-email">ایمیل:</label>
+          <input type="email" id="register-email" name="email" placeholder="ایمیل خود را وارد کنید" required>
+
+          <label for="register-password">رمز عبور:</label>
+          <input type="password" id="register-password" name="password" placeholder="رمز عبور خود را وارد کنید" required>
+
+          <label for="register-confirm-password">تأیید رمز عبور:</label>
+          <input type="password" id="register-confirm-password" name="confirm-password" placeholder="رمز عبور خود را تایید کنید" required>
+
+          <button type="submit">ثبت‌نام</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer Section -->
+  <footer>
+    <div class="container">
+      <div class="footer-links">
+        <a href="about.html">درباره ما</a>
+        <a href="contact.html">تماس با ما</a>
+        <a href="#">قوانین و شرایط</a>
+        <a href="#">حریم خصوصی</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    function showForm(formType) {
+      const loginForm = document.getElementById('login-form');
+      const registerForm = document.getElementById('register-form');
+      const loginButton = document.querySelector('.tab-button:nth-child(1)');
+      const registerButton = document.querySelector('.tab-button:nth-child(2)');
+      
+      if (formType === 'login') {
+        loginForm.classList.add('active');
+        registerForm.classList.remove('active');
+        loginButton.classList.add('active');
+        registerButton.classList.remove('active');
+      } else {
+        registerForm.classList.add('active');
+        loginForm.classList.remove('active');
+        registerButton.classList.add('active');
+        loginButton.classList.remove('active');
+      }
+    }
+  </script>
+</body>
+</html>

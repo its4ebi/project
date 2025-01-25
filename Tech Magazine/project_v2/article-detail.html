@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>جزئیات مقاله</title>
+  <link rel="stylesheet" href="{% static 'styles.css' %}">
+</head>
+<body>
+  <!-- Header Section -->
+  <header>
+    <div class="header-content">
+      <div class="right-section">
+        <h1>نام سایت</h1>
+      </div>
+
+    <div class="left-section">
+      <nav>
+        <ul>
+          <li><a href="#">خانه</a></li>
+          <li><a href="#">درباره ما</a></li>
+          <li><a href="#">مقالات</a></li>
+          <li><a href="#">تماس با ما</a></li>
+        </ul>
+      </nav>
+      <div class="search">
+        <input type="text" placeholder="جستجو">
+        <button>جستجو</button>
+      </div>
+    </div>
+  </div>
+</header>
+
+  <!-- Article Detail Section -->
+  <section class="article-detail">
+    <div class="container">
+      <h2>عنوان مقاله</h2>
+      <p class="date">تاریخ انتشار: 14 ژانویه 2025</p>
+      <p class="content">متن کامل مقاله در اینجا قرار می‌گیرد...</p>
+
+      <!-- Comments Section -->
+      <div class="comments-section">
+        <h3>نظرات کاربران</h3>
+        
+        <!-- Displaying Comments -->
+        <div class="comment">
+          <p class="comment-author">محمد - 15 ژانویه 2025</p>
+          <p class="comment-text">مقاله بسیار مفیدی بود. سپاسگزارم!</p>
+        </div>
+
+        <div class="comment">
+          <p class="comment-author">سارا - 16 ژانویه 2025</p>
+          <p class="comment-text">عالی بود، منتظر مقالات بعدی هستم.</p>
+        </div>
+
+        <!-- Comment Form -->
+        <h4>نظر خود را بنویسید:</h4>
+        <form action="#" method="post">
+          <label for="name">نام شما:</label>
+          <input type="text" id="name" name="name" placeholder="نام خود را وارد کنید" required>
+
+          <label for="comment">نظر شما:</label>
+          <textarea id="comment" name="comment" rows="4" placeholder="نظر خود را بنویسید" required></textarea>
+
+          <button type="submit">ارسال نظر</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer Section -->
+  <footer>
+    <div class="container">
+      <div class="footer-links">
+        <a href="#">درباره ما</a>
+        <a href="#">تماس با ما</a>
+        <a href="#">قوانین و شرایط</a>
+        <a href="#">حریم خصوصی</a>
+      </div>
+      <div class="social-links">
+        <a href="#">اینستاگرام</a>
+        <a href="#">تلگرام</a>
+        <a href="#">فیس‌بوک</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

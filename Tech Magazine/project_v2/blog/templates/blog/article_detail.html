@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>{{ article.title }}</title>
+  <link rel="stylesheet" href="{% static 'styles.css' %}">
+</head>
+<body>
+  <!-- Header Section -->
+  <header>
+    <div class="header-content">
+      <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+      <!-- بخش راست: عنوان یا لوگوی سایت -->
+      <div class="right-section">
+        <h1>Tech Magazine</h1>
+      </div>
+  
+      <!-- لینک‌های ناوبری -->
+      <nav class="center-nav">
+        <ul>
+          <li><a href="{% url 'home' %}">خانه</a></li>
+          <li><a href="{% url 'about' %}">درباره ما</a></li>
+          <li><a href="{% url 'contact' %}">تماس با ما</a></li>
+        </ul>
+      </nav>
+  
+      <!-- بخش جستجو -->
+      <div class="search">
+        <input type="text" placeholder="جستجو...">
+        <button>جستجو</button>
+      </div>
+    </div>
+  </header>
+
+<!-- Article Detail Section -->
+<section class="article-detail">
+  <div class="container">
+    <!-- Article Card -->
+    <div class="article-card">
+      <h2 class="article-title">{{ article.title }}</h2>
+      <p class="date">تاریخ انتشار: {{ article.publish_date|date:"d F Y" }}</p>
+      
+      <!-- Article Image -->
+      <div class="article-image-container">
+        {% if article.image %}
+          <img src="{{ article.image.url }}" alt="{{ article.title }}" class="article-image">
+        {% else %}
+          <img src="{% static 'default.jpg' %}" alt="{{ article.title }}" class="article-image">
+        {% endif %}
+      </div>
+
+      <!-- Article Content -->
+      <div class="article-body">
+        {{ article.body|safe }}  <!-- فیلتر safe برای نمایش HTML -->
+      </div>
+
+      <!-- Article Meta -->
+      <div class="article-meta">
+        <!-- نویسنده و تصویر نویسنده کنار هم -->
+        <p style="display: flex; align-items: center;">
+          نویسنده: {{ article.author.username }} 
+          <img src="{{ article.author.profile_picture.url }}" alt="Profile Picture" style="width: 50px; height: 50px; border-radius: 50%; margin-right: 10px;">
+        </p>
+        <p class="views">بازدیدها: {{ article.views }}</p>
+      </div>
+    </div>
+  </div>
+</section>
+<body class="article-detail-page">
+<!-- Comments Section -->
+
+    <!-- Form to Submit a New Comment inside a Card -->
+    <div class="comment-form-card input">
+      <h3>نظر شما چیه؟</h3>
+      <form method="post">
+        {% csrf_token %}
+        <div>
+          <label for="id_name" class="id_name">نام</label> <!-- برچسب فارسی -->
+          {{ form.name }}
+        </div>
+        <div>
+          <label for="id_content"class="id_content">نظر</label> <!-- برچسب فارسی -->
+          {{ form.content }}
+        </div>
+        <button type="submit" class="comment-form-card button">ارسال نظر</button>
+      </form>
+    </div>
+
+    <!-- Display Approved Comments -->
+    {% for comment in comments %}
+      <div class="comment-card">
+        <h3>نظرات کاربران:</h3>
+        <p><strong>{{ comment.name }}</strong> (تاریخ: {{ comment.publish_date|date:"d F Y" }})</p>
+        <p>{{ comment.content }}</p>
+      </div>
+    {% empty %}
+    
+      <p>هنوز نظری ثبت نشده است.</p>
+    {% endfor %}
+  </div>
+</section>
+
+  <!-- Footer Section -->
+  <footer>
+    <div class="container">
+      <nav class="footer-nav">
+        <ul>
+          <li><a href="{% url 'about' %}">درباره ما</a></li>
+          <li><a href="{% url 'contact' %}">تماس با ما</a></li>
+        </ul>
+      </nav>
+      <div class="social-links">
+        <p>تمامی حقوق محفوظ است - Tech Magazine © 2025</p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تماس با ما</title>
+    <link rel="stylesheet" href="{% static 'styles.css' %}">
+</head>
+<body>
+  <div class="page-wrapper">
+      <!-- Header Section -->
+      <header>
+        <div class="header-content">
+          <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+          <div class="right-section">
+            <h1>Tech Magazine</h1>
+          </div>
+          <nav class="center-nav">
+            <ul>
+              <li><a href="{% url 'home' %}">خانه</a></li>
+              <li><a href="{% url 'about' %}">درباره ما</a></li>
+            </ul>
+          </nav>
+          <div class="search">
+            <input type="text" placeholder="جستجو...">
+            <button>جستجو</button>
+          </div>
+        </div>
+      </header>
+
+      <!-- Main Content -->
+      <main class="contact-page">
+          <div class="container">
+              <h1>تماس با ما</h1>
+              <p>برای ارتباط با تیم مدیریت سایت می‌توانید از اطلاعات زیر استفاده کنید:</p>
+              
+              <div class="admins-list">
+                {% for admin in admins %}
+                <div class="admin-card">
+                    <!-- اصلاح مسیر تصاویر -->
+                    <img src="{% static admin.profile_pic %}" alt="عکس {{ admin.name }}">
+                    <h2>{{ admin.name }}</h2>
+                    <p>راه ارتباطی: <a href="mailto:{{ admin.email }}" class="contact-link">{{ admin.email }}</a></p>
+                </div>
+                {% endfor %}
+              </div>
+          </div>
+      </main>
+
+      <footer>
+        <div class="container">
+          <nav class="footer-nav">
+            <ul>
+              <li><a href="{% url 'about' %}">درباره ما</a></li>
+              <li><a href="{% url 'contact' %}">تماس با ما</a></li>
+            </ul>
+          </nav>
+          <div class="social-links">
+            <p>تمامی حقوق محفوظ است - Tech Magazine © 2025</p>
+          </div>
+        </div>
+      </footer>
+  </div>
+</body>
+</html>

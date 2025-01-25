@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>صفحه اصلی سایت</title>
+  <link rel="stylesheet" href="{% static 'styles.css' %}">
+</head>
+<body>
+  <!-- Header Section -->
+  <header>
+    <div class="header-content">
+      <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+      <!-- بخش راست: عنوان یا لوگوی سایت -->
+      <div class="right-section">
+        <h1>Tech Magazine</h1>
+      </div>
+  
+      <!-- لینک‌های ناوبری -->
+      <nav class="center-nav">
+        <ul>
+          <li><a href="{% url 'about' %}">درباره ما</a></li>
+          <li><a href="{% url 'contact' %}">تماس با ما</a></li>
+        </ul>
+      </nav>
+  
+      <!-- بخش جستجو -->
+      <div class="search">
+        <input type="text" placeholder="جستجو...">
+        <button>جستجو</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-content">
+        <h1>مقالات و اخبار تخصصی در زمینه تکنولوژی</h1>
+        <p>اینجا می‌توانید مقالات و اخبار متنوعی را در زمینه‌های مختلف تکنولوژی مطالعه کنید.</p>
+        <a href="{% url 'article_list' %}" class="cta-button">مطالعه اخبار و مقالات</a>
+      </div>
+    </div>
+  </section>
+
+<!-- Recent Articles -->
+<section class="articles">
+  <div class="container">
+    <h2>جدید ترین ها </h2>
+    <div class="article-list">
+      {% for article in recent_articles %}
+      <div class="article-card">
+        <div class="article-image-container">
+          {% if article.image %}
+            <img src="{{ article.image.url }}" alt="{{ article.title }}" class="article-image">
+          {% else %}
+            <img src="{% static 'default.jpg' %}" alt="{{ article.title }}" class="article-image">
+          {% endif %}
+        </div>
+        <h3>{{ article.title }}</h3>
+        <p>{{ article.body|truncatechars:100 }}</p>
+        <a href="{% url 'article_detail' article.id %}" class="cta-button">مشاهده بیشتر</a>
+      </div>
+      {% endfor %}
+    </div>
+
+    <!-- دکمه مشاهده بیشتر مقالات -->
+    <div class="view-more-container">
+      <a href="{% url 'article_list' %}" class="view-more">مشاهده اخبار و مقالات بیشتر</a>
+    </div>
+  </div>
+</section>م
+
+<!-- Popular Articles -->
+<section class="popular-articles">
+  <div class="container"> 
+    <h2>موارد پر بازدید</h2>
+    <div class="article-list">
+      {% for article in popular_articles %}
+      <div class="article-card">
+        <div class="article-image-container">
+          {% if article.image %}
+            <img src="{{ article.image.url }}" alt="{{ article.title }}" class="article-image">
+          {% else %}
+            <img src="{% static 'default.jpg' %}" alt="{{ article.title }}" class="article-image">
+          {% endif %}
+        </div>
+        <h3>{{ article.title }}</h3>
+        <p>{{ article.body|truncatechars:100 }}</p>
+        <a href="{% url 'article_detail' article.id %}" class="cta-button">مشاهده بیشتر</a>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+  <!-- Footer Section -->
+  <footer>
+    <div class="container">
+      <nav class="footer-nav">
+        <ul>
+          <li><a href="{% url 'about' %}">درباره ما</a></li>
+          <li><a href="{% url 'contact' %}">تماس با ما</a></li>
+        </ul>
+      </nav>
+      <div class="social-links">
+        <p>تمامی حقوق محفوظ است - Tech Magazine © 2025</p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

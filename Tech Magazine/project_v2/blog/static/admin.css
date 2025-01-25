@@ -1,0 +1,9 @@
+body {
+    font-family: 'IRANSans', sans-serif;
+    direction: rtl;
+    text-align: right;
+}
+
+.field-title {
+    text-align: right;
+}

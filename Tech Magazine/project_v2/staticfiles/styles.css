@@ -1,0 +1,640 @@
+{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background-color: #f4f4f4;
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+header {
+  background-color: #333;
+  color: white;
+  padding: 20px 0;
+}
+
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header .logo a {
+  font-size: 24px;
+  color: white;
+  text-decoration: none;
+}
+
+header nav ul {
+  list-style: none;
+}
+
+header nav ul li {
+  display: inline;
+  margin-right: 20px;
+}
+
+header nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+header .search input {
+  padding: 5px;
+  font-size: 16px;
+}
+
+.hero {
+  background-color: #204766;
+  color: white;
+  text-align: center;
+  padding: 100px 0;
+}
+
+.hero h1 {
+  font-size: 48px;
+}
+
+.hero p {
+  font-size: 18px;
+  margin: 20px 0;
+}
+
+.hero .cta-button {
+  background-color: #fff;
+  color: #333;
+  padding: 10px 20px;
+  text-decoration: none;
+  font-size: 18px;
+  border-radius: 5px;
+}
+
+.articles, .popular-articles, .testimonials {
+  padding: 60px 0;
+  background-color: #fff;
+  margin-top: 20px;
+}
+
+.articles h2, .popular-articles h2, .testimonials h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+.article-list {
+  display: flex;
+  justify-content: space-between;
+}
+
+.article-card {
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 5px;
+  width: 30%;
+  text-align: center;
+}
+
+.article-card img {
+  width: 100%;
+  border-radius: 5px;
+}
+
+.article-card h3 {
+  margin: 15px 0;
+}
+
+.article-card a {
+  text-decoration: none;
+  color: #4CAF50;
+}
+
+.view-more {
+  display: block;
+  text-align: center;
+  margin-top: 20px;
+  font-size: 18px;
+  color: #4CAF50;
+  text-decoration: none;
+}
+
+.testimonial-card {
+  background-color: #f9f9f9;
+  padding: 20px;
+  margin: 10px 0;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.testimonial-card p {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.testimonial-card span {
+  font-weight: bold;
+}
+
+/* عمومی */
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+/* هدر */
+header {
+  background-color: #333;
+  color: white;
+  padding: 20px 0;
+}
+
+header .logo a {
+  font-size: 24px;
+  color: white;
+  text-decoration: none;
+}
+
+header nav ul {
+  list-style: none;
+}
+
+header nav ul li {
+  display: inline;
+  margin-right: 20px;
+}
+
+header nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+/* فرم تماس با ما */
+.contact-us form {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.contact-us label {
+  display: block;
+  margin-top: 10px;
+  font-size: 16px;
+}
+
+.contact-us input, .contact-us textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  font-size: 14px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.contact-us button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 15px;
+}
+
+.contact-us button:hover {
+  background-color: #45a049;
+}
+
+/* درباره ما */
+.about-us {
+  background-color: #fff;
+  padding: 40px 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-top: 30px;
+}
+
+.about-us p {
+  font-size: 18px;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+/* فوتر */
+footer {
+  background-color: #333;
+  color: white;
+  padding: 20px 0;
+  margin-top: 50px;
+}
+
+footer .footer-links {
+  text-align: center;
+}
+
+footer .footer-links a {
+  color: white;
+  text-decoration: none;
+  margin: 0 15px;
+  font-size: 16px;
+}
+
+footer .footer-links a:hover {
+  text-decoration: underline;
+}
+/* عمومی */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background-color: #f4f4f4;
+}
+
+/* هدر */
+header {
+  background-color: #333;
+  color: white;
+  padding: 20px 0;
+}
+
+header .container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+header .logo a {
+  font-size: 24px;
+  color: white;
+  text-decoration: none;
+}
+
+/* فرم ورود و ثبت‌نام */
+.login-register {
+  padding: 60px 0;
+  background-color: #fff;
+}
+
+.login-register h2 {
+  font-size: 32px;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.tabs {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.tab-button {
+  background-color: #f4f4f4;
+  color: #333;
+  border: 1px solid #ccc;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  margin: 0 10px;
+  border-radius: 5px;
+}
+
+.tab-button.active {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.form-container {
+  display: none;
+  text-align: center;
+}
+
+.form-container.active {
+  display: block;
+}
+
+form {
+  display: inline-block;
+  width: 300px;
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+form label {
+  display: block;
+  margin-top: 10px;
+  font-size: 16px;
+}
+
+form input {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  font-size: 14px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+form button {
+  width: 100%;
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 15px;
+}
+
+form button:hover {
+  background-color: #45a049;
+}
+/* عمومی */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
+}
+
+body {
+  background-color: #f4f4f4;
+  font-size: 16px;
+  color: #333;
+}
+
+/* هدر */
+header {
+  background-color: #2c3e50;
+  color: white;
+  padding: 20px 0;
+}
+
+header .container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+header .logo a {
+  font-size: 24px;
+  color: white;
+  text-decoration: none;
+}
+
+header nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+header nav ul li {
+  display: inline;
+  margin-right: 20px;
+}
+
+header nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+header nav ul li a:hover {
+  color: #4CAF50;
+}
+
+/* مقالات */
+.articles {
+  padding: 60px 0;
+  background-color: #fff;
+}
+
+.articles h2 {
+  text-align: center;
+  font-size: 36px;
+  color: #333;
+  margin-bottom: 40px;
+}
+
+.article {
+  background-color: #fff;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.article h3 {
+  font-size: 28px;
+  color: #2c3e50;
+  margin-bottom: 10px;
+}
+
+.article p {
+  font-size: 16px;
+  color: #555;
+}
+
+.article .read-more {
+  display: inline-block;
+  margin-top: 15px;
+  color: #4CAF50;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.article .read-more:hover {
+  text-decoration: underline;
+}
+
+/* جزئیات مقاله */
+.article-detail {
+  padding: 60px 0;
+  background-color: #fff;
+}
+
+.article-detail h2 {
+  text-align: center;
+  font-size: 36px;
+  color: #2c3e50;
+  margin-bottom: 20px;
+}
+
+.article-detail .date {
+  text-align: center;
+  font-size: 16px;
+  color: #888;
+}
+
+.article-detail .content {
+  font-size: 18px;
+  line-height: 1.6;
+  color: #333;
+  margin-top: 30px;
+}
+
+.comments-section {
+  margin-top: 50px;
+  background-color: #f9f9f9;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.comments-section h3 {
+  font-size: 24px;
+  color: #2c3e50;
+  margin-bottom: 20px;
+}
+
+.comment {
+  margin-bottom: 20px;
+}
+
+.comment-author {
+  font-size: 18px;
+  color: #333;
+  font-weight: bold;
+}
+
+.comment-text {
+  font-size: 16px;
+  color: #555;
+}
+
+.comment form {
+  margin-top: 30px;
+}
+
+.comment form input,
+.comment form textarea {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  font-size: 16px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.comment form button {
+  width: 100%;
+  padding: 15px;
+  background-color: #4CAF50;
+  color: white;
+  font-size: 18px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.comment form button:hover {
+  background-color: #45a049;
+}
+
+/* فوتر */
+footer {
+  background-color: #2c3e50;
+  color: white;
+  padding: 20px 0;
+}
+
+footer .container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+footer .footer-links {
+  text-align: center;
+}
+
+footer .footer-links a {
+  color: white;
+  text-decoration: none;
+  margin: 0 15px;
+  font-size: 16px;
+}
+
+footer .footer-links a:hover {
+  text-decoration: underline;
+}
+
+form p {
+  margin-top: 15px;
+}
+
+form a {
+  color: #4CAF50;
+  text-decoration: none;
+}
+
+form a:hover {
+  text-decoration: underline;
+}
+
+/* فوتر */
+footer {
+  background-color: #333;
+  color: white;
+  padding: 20px 0;
+  margin-top: 50px;
+}
+
+footer .container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+footer .footer-links {
+  text-align: center;
+}
+
+footer .footer-links a {
+  color: white;
+  text-decoration: none;
+  margin: 0 15px;
+  font-size: 16px;
+}
+
+footer .footer-links a:hover {
+  text-decoration: underline;
+}
+
+footer {
+  background-color: #333;
+  color: white;
+  padding: 20px 0;
+}
+
+footer .container {
+  display: flex;
+  justify-content: space-between;
+}
+
+footer .footer-links a, footer .social-links a {
+  color: white;
+  text-decoration: none;
+  margin-right: 20px;
+}
+
+footer .social-links a {
+  font-size: 20px;
+}

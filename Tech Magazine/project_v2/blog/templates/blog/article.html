@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>نمایش تمام مقالات</title>
+  <link rel="stylesheet" href="{% static 'styles.css' %}">
+</head>
+<body>
+  <!-- Header Section -->
+  <header>
+    <div class="header-content">
+      <div class="right-section">
+        <h1>Tech Magazine</h1>
+      </div>
+      <nav class="center-nav">
+        <ul>
+          <li><a href="{% url 'home' %}">خانه</a></li>
+          <li><a href="#">درباره ما</a></li>
+          <li><a href="#">تماس با ما</a></li>
+        </ul>
+      </nav>
+      <div class="search">
+        <input type="text" placeholder="جستجو...">
+        <button>جستجو</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Sorting Section -->
+  <section class="sorting-section">
+    <div class="container">
+      <div class="sorting-controls">
+        <p>مرتب سازی بر اساس:</p>
+        <button onclick="sortArticles('views')">تعداد بازدید</button>
+        <button onclick="sortArticles('publish_date')">تاریخ انتشار</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Articles Section -->
+  <section class="articles">
+    <div class="container">
+      <div class="article-grid">
+        {% for article in articles %}
+        <div class="article-card">
+          <div class="article-image-container">
+            {% if article.image %}
+              <img src="{{ article.image.url }}" alt="{{ article.title }}" class="article-image">
+            {% else %}
+              <img src="{% static 'default.jpg' %}" alt="{{ article.title }}" class="article-image">
+            {% endif %}
+          </div>
+          <h3>{{ article.title }}</h3>
+          <p>{{ article.body|truncatechars:100 }}</p>
+          <a href="{% url 'article_detail' article.id %}" class="cta-button">مشاهده بیشتر</a>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+</body>
+</html>
